@@ -53,38 +53,29 @@ int main(void){
     //elements config//elementos
     //ball config//config da bola
     Ball ball;
-    ball.pos.x = WINDOWWIDHT/2;
-    ball.pos.y = WINDOWHEIGHT/2;
-    ball.spd.x = 5; 
-    ball.spd.y = 5;
+    ball.pos = (Vector2){WINDOWWIDHT/2,WINDOWHEIGHT/2};
+    ball.spd = (Vector2){5,5}; 
     ball.radius = 10;
     int ballmspd[] = {1,-1};
+    Vector2 startpos = {WINDOWWIDHT/2, WINDOWHEIGHT/2};
     // bars config//config das barras
     Bar barleft;
     Bar barright;
-    barleft.pos.x = 50;
-    barleft.pos.y = (WINDOWHEIGHT/2)-50;
+    barleft.pos = (Vector2){50, (WINDOWHEIGHT/2)-50};
     barleft.spd.y = 10;
-    barleft.size.x = 25;
-    barleft.size.y = 100;
+    barleft.size = (Vector2){25, 100};
     barleft.score = 0;
-    barright.pos.x = WINDOWWIDHT-50;
-    barright.pos.y = (WINDOWHEIGHT/2)-50;
+    barright.pos = (Vector2){WINDOWWIDHT-50, (WINDOWHEIGHT/2)-50};
     barright.spd.y = 10;
-    barright.size.x = 25;
-    barright.size.y = 100;
+    barright.size = (Vector2){25, 100};
     barright.score = 0;
     // decobars
     Bar decotop;
     Bar decobottom;
-    decotop.pos.x = 0;
-    decotop.pos.y = 0;
-    decotop.size.x = WINDOWWIDHT;
-    decotop.size.y = 25;
-    decobottom.pos.x = 0;
-    decobottom.pos.y = 580;
-    decobottom.size.x = WINDOWWIDHT;
-    decobottom.size.y = 25;
+    decotop.pos = (Vector2){0, 0};
+    decotop.size = (Vector2){WINDOWWIDHT, 25};
+    decobottom.pos = (Vector2){0, 580};
+    decobottom.size = (Vector2){WINDOWWIDHT, 25};
     // game config//config do jogo
     GAMESTATE gamestate = GAME_PRESTART;
     const int MAXPOINTS = 12;
@@ -150,8 +141,7 @@ int main(void){
                     }
                     else
                     {
-                        ball.pos.x = WINDOWWIDHT/2;
-                        ball.pos.y = WINDOWHEIGHT/2;
+                        ball.pos = startpos;
                     }
 
                 }
@@ -165,8 +155,7 @@ int main(void){
                     }
                     else
                     {
-                        ball.pos.x = WINDOWWIDHT/2;
-                        ball.pos.y = WINDOWHEIGHT/2;
+                        ball.pos = startpos;
                     }
                 }
             }
