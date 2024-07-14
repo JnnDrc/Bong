@@ -49,6 +49,12 @@ int main(void){
     Sound hitborder = LoadSound("res/hitborder.wav");
     Sound hitscore = LoadSound("res/hitscore.wav");
 
+    // Generate random direction
+    int direction;
+    srand(time(NULL));
+    direction = rand() % 2;
+    direction = (direction == 0) ? -1 : 1;
+
     
     //elements config//elementos
     //ball config//config da bola
@@ -98,7 +104,7 @@ int main(void){
                 int xfac = ballmspd[rand() % (sizeof(ballmspd)/sizeof(ballmspd[0]))];
                 int yfac = ballmspd[rand() % (sizeof(ballmspd)/sizeof(ballmspd[0]))];
                 printf("\nxfac: %d|yfac: %d",xfac,yfac);
-                ball.spd = (Vector2){5*xfac,5*yfac};
+                ball.spd = (Vector2){direction*5*xfac, direction*5*yfac};
                 printf("\nball.spd.x: %lf|ball.spd.y: %lf",ball.spd.x,ball.spd.y);
             }
             if(gamestate == GAME_PRESTART)
