@@ -27,6 +27,7 @@ typedef enum
     GAME_RUNNING,//1
     GAME_OVER//2
 }GAMESTATE;
+
 // check the collision of the ball with the bars//checa a colisão da bola com as barras
 bool checkcollision(Ball ball, Bar bar)
 {
