@@ -31,6 +31,11 @@ make a point, who makes 12 points first, wins.
 
 Ball stick on bars [STATUS : Unsolved]
 
+### Contributors
+
+* [JnnDrc : Creator/Owner](https://github.com/JnnDrc)
+* [rdWei : Contributor](https://github.com/rdWei)
+
 #### Note
 
     This is the first programming project i made in my life,
