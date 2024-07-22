@@ -14,8 +14,8 @@ A recreation of the game Pong in C
 
 ## Compile
 
-* Windows :
-* Linux   :
+* Windows : make windows
+* Linux   : make linux
 
 ### How to Play
 
