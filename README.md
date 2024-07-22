@@ -6,7 +6,7 @@ A recreation of the game Pong in C
 ## Run
 
 * Linux or Windows 11 : `./bong`
-* Windows 10 type : `.\bong.exe`
+* Windows 10 : `.\bong.exe`
 
 ### special params
 
